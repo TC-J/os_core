@@ -1,10 +1,13 @@
 //! # os_core
 //! Core operating system functions
+//! 
+//! These work on Linux and OSX
 #![allow(unused, non_camel_case_types)]
 pub extern crate libc;
 
 pub mod constants;
 pub mod types;
+pub mod linux;
 pub mod unix;
 
 /// allocate raw program memory (atleast around the size of the system's page-size (usually 4096); ie, not small allocations)

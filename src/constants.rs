@@ -24,3 +24,16 @@ pub mod map {
     //TODO add all linux mmap flags
     //TODO add all osx mmap flags
 }
+
+pub mod unshare {
+    pub const NSMOUNT: i32 = libc::CLONE_NEWNS;
+    pub const NSUSER: i32 = libc::CLONE_NEWUSER;
+    pub const NSIPC: i32 = libc::CLONE_NEWIPC;
+    pub const NSNET: i32 = libc::CLONE_NEWNET;
+    pub const NSPID: i32 = libc::CLONE_NEWPID;
+    pub const NSUTS: i32 = libc::CLONE_NEWUTS;
+    pub const NSCGROUP: i32 = libc::CLONE_NEWCGROUP;
+    pub const FILES : i32 = libc::CLONE_FILES;
+    pub const FS : i32 = libc::CLONE_FS;
+    pub const VM : i32 = libc::CLONE_VM;
+}

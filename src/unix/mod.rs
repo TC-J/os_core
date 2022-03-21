@@ -1,3 +1,4 @@
+//! Operating system calls that work on OSX and Linux
 /// Allocates physical memory for a file, device, or anonymous-file (ie, a file that is only stored in-memory; just a memory allocation for the running process).
 /// 
 /// Typically, the data in the device (eg, disk) is loaded when the page of memory is accessed. I use the word "typically" because 
