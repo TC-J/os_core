@@ -44,7 +44,6 @@ pub fn sys_munmap(addr: *mut (), len: usize) -> i32 {
 
 /// Create a new process by copying the memory-mappings in the current process into a new address space and get a separate
 /// scheduling-context in the OS.
-/// 
 pub fn sys_fork() -> i32 {
     unsafe {
         libc::fork()
@@ -60,6 +59,15 @@ pub fn sys_wait() -> (i32, i32) {
         let mut status = 0;
         let pid = libc::wait(&mut status);
         (pid, status)
+    }
+}
+
+/// Create a pipe
+/// 
+/// The first i32 is the read-end of the pipe, the second i32 is the write-end
+pub fn sys_pipe (pfds: &mut [i32; 2]) -> i32 {
+    unsafe {
+        libc::pipe(pfds as *mut i32)
     }
 }
 
