@@ -1,3 +1,5 @@
+//! # os_core
+//! Core operating system functions
 #![allow(unused, non_camel_case_types)]
 pub extern crate libc;
 
