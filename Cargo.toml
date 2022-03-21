@@ -4,6 +4,8 @@ authors = ["Jowers <jowerstc@gmail.com>"]
 version = "0.1.0"
 edition = "2021"
 license = "MIT"
+readme = "README.md"
+repository = "https://github.com/TC-J/os_core.git"
 description = "core, operating system related, functionality"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
